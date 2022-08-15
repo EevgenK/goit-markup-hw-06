@@ -476,11 +476,11 @@ textarea {
 .join-up {
 	display: flex;
 	align-items: baseline;
+	justify-content: space-around;
 }
 
 .join {
 	margin-left: 70px;
-	margin-right: 93px;
 }
 
 .join-title {
@@ -574,9 +574,10 @@ textarea {
 .sign-btn:hover {
 	background: var(--btn-blue-color);
 }
-/* .sign-up {
+.sign-up {
 	display: flex;
-} */
+	margin-left: 93px;
+}
 
 .sign-up-icon {
 	fill: currentColor;
@@ -892,6 +893,7 @@ textarea {
 	height: 15px;
 	border-radius: 2px;
 	margin-right: 8.38px;
+	transition: boder-color var(--animation-mode);
 }
 
 .check-icon {
@@ -911,6 +913,12 @@ textarea {
 .label-checkbox:hover {
 	color: var(--accent-text-color);
 }
+
+.form-checkbox:focus + .label-checkbox span,
+.form-checkbox:hover + .label-checkbox span {
+	border-color: var(--accent-text-color);
+}
+
 /* .label-checkbox::after {
 	content: "";
 	height: 15px;
